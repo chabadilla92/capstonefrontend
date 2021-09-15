@@ -1,42 +1,51 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { graphql } from 'gatsby'
-import Link from 'gatsby-link'
+import Popup from '../components/popup'
 
 
 
-const VideosPage = ({ data }) => (
+const VideosPage = ({ data }) => {
+const [buttonPopup, setButtonPopup] = useState(false);
+
+return (
         <div>
         <p>VideosPage</p>
         {data.allContentfulVideoPost.edges.map(vid => (
             <div key={vid.node.video[0].id}>
                 <h3>{vid.node.title}</h3>
-
-                <Link to={`/videos/${vid.node.slug}/`}>{vid.node.slug}</Link>
+                <button onClick={() => setButtonPopup(true)}><img src={vid.node.image.file.url} alt="Images"></img></button>
+                <Popup trigger={buttonPopup} setTrigger={setButtonPopup}></Popup>
             </div>
         ))}
-        </div>   
-)
+        </div> 
+)  
+}
 
 
 
 export const videoPageQuery = graphql`
     query VideoIndexQuery {
-            allContentfulVideoPost {
-              edges {
-                node {
-                  slug
-                  video {
-                    id
-                    description
-                    title
-                    file {
-                      url
-                    }
-                  }
-                  title
-                }
+      allContentfulVideoPost {
+        edges {
+          node {
+            slug
+            video {
+              id
+              description
+              title
+              file {
+                url
               }
             }
+            title
+            image {
+              file {
+                url
+              }
+            }
+          }
+        }
+      }
     }
 `
 

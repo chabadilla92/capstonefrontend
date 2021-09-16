@@ -6,12 +6,6 @@ import './popup.css'
 
 
 const Popup = (props) => {
-console.log('props', props)
-
-
-
-
-
 
 return (props.trigger) ? (
     <div className="popup">

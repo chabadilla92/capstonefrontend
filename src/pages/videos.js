@@ -10,6 +10,10 @@ const VideosPage = ( {data} ) => {
 const [buttonPopup, setButtonPopup] = useState(false);
 const [single, setSingle] = useState(null);
 
+const handleClick = (vid) => {
+      setButtonPopup(true)
+      setSingle(vid.node.video[0].file.url)
+}
 
 return (
   <div>
@@ -17,37 +21,15 @@ return (
     {data.allContentfulVideoPost.edges.map(vid => (
       <div key={vid.node.video[0].id}>
         <h3>{vid.node.title}</h3>
-        <button onClick={() => setButtonPopup(true)}><img src={vid.node.image.file.url} alt="Images"></img></button>
+        <button onClick={() => {handleClick(vid)}}><img src={vid.node.image.file.url} alt="Images"></img></button>
       </div>
     ))}
-    <Popup trigger={buttonPopup} setTrigger={setButtonPopup} url={data.allContentfulVideoPost.edges}/>
+    <Popup trigger={buttonPopup} single={single} setTrigger={setButtonPopup} url={data.allContentfulVideoPost.edges}/>
   </div>
 )
 
         
-        {/* {vid.node.video.map(x => (
-          <div> */}
 
-          {/* <VideoPlayer videoSrcURL={x.file.url} /> */}
-          {/* <Popup key={x.id} url={x.file.url} trigger={buttonPopup} triggerOne={single} setTrigger={setButtonPopup}></Popup>
-          </div>
-    ))} */}
-        
-      
-  
-  
-
-// return (<div>asdsd
-//         <p>VideosPage</p>
-//         {data.allContentfulVideoPost.edges.map(vid => (
-//             <div key={vid.node.video[0].id}>
-//                 <h3>{vid.node.title}</h3>
-//                 <button onClick={() => setButtonPopup(true)}><img src={vid.node.image.file.url} alt="Images"></img></button>
-//                 <Popup trigger={buttonPopup} setTrigger={setButtonPopup}></Popup>
-//             </div>
-//          ))} 
-//         </div> 
-// )  
 }
 
 

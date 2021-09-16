@@ -7,17 +7,11 @@ import './popup.css'
 
 const Popup = (props) => {
 console.log('props', props)
-const [links, setLinks] = useState(null);
 
-const newFunc = () => {
-    {props.url.map(y => (
-        y.node.video.map(x => (
-            setLinks(x.id)
-        ))
-    ))}
-}
 
-console.log('id', links)
+
+
+
 
 return (props.trigger) ? (
     <div className="popup">
@@ -26,37 +20,11 @@ return (props.trigger) ? (
 
             <div>
             <VideoPlayer 
-                    videoSrcURL={null}
+                    videoSrcURL={props.single}
                     // videoTitle={data.allContentfulVideoPost.video[0].title}
                 />
             </div>
 
-
-        {/* <StaticQuery
-            query={graphql`
-                query {
-                    allContentfulVideoPost {
-                        edges {
-                          node {
-                            video {
-                              file {
-                                url
-                              }
-                              id
-                              title
-                            }
-                          }
-                        }
-                      }
-                    }
-            `}
-            render={data => (
-                <VideoPlayer 
-                    videoSrcURL={data.node.video[0].file.url}
-                    // videoTitle={data.allContentfulVideoPost.video[0].title}
-                />
-            )}
-            /> */}
         <button className="close-btn" onClick={() => props.setTrigger(false)}>close</button>
         </div>
     </div>

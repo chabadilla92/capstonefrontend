@@ -24,6 +24,11 @@ state ={
             path: '/videos',
             text: 'videos'
         },
+        {
+            id: 4,
+            path: '/shop',
+            text: 'shop'
+        },
     ]
 };
 

@@ -1,16 +1,32 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+
 
 import Layout from "../components/layout"
-import { FaGulp } from 'react-icons/fa'
+import BackgroundSection from "../components/Globals/BackgroundSection"
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <h1>Hi People</h1>
-    <FaGulp/>
+    <BackgroundSection 
+    img={data.img.childImageSharp.fluid}
+    title="tyler1 Official Website"
+    styleClass="default-background"
+    />
   </Layout>
-)
+);
+
+
+export const query = graphql`
+{
+	img:file(relativePath:{eq:"default-background.jpeg"}) {
+		childImageSharp{
+			fluid {
+				...GatsbyImageSharpFluid_tracedSVG
+      }
+    }
+  }
+}
+`;
 
 export default IndexPage
 

@@ -5,6 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import BackgroundSection from "../components/Globals/BackgroundSection"
 
+
 const IndexPage = ({ data }) => (
   <Layout>
     <BackgroundSection 

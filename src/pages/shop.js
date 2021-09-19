@@ -5,6 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import BackgroundSection from "../components/Globals/BackgroundSection"
 import Menu from "../components/Globals/Menu"
+import Products from "../components/Globals/Products"
 
 const Shop = ({ data }) => (
   <Layout>
@@ -14,6 +15,7 @@ const Shop = ({ data }) => (
     styleClass="default-background"
     />
     <Menu items={data.menu}/>
+    <Products />
   </Layout>
 );
 

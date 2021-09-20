@@ -48,12 +48,15 @@ export default class Menu extends Component {
                                         <button 
                                             type="button" 
                                             key={index} 
-                                            className="btn btn-yellow text-capitalize mt-3" 
+                                            className="btn cybr-btn text-capitalize mt-3" 
                                             onClick={() => {
                                                 this.handleItems(category)
                                             }}
                                         > 
-                                            {category}
+                                        {category}<span aria-hidden></span>
+                                        <span aria-hidden class="cybr-btn__glitch">{category}</span>
+                                        <span aria-hidden class="cybr-btn__tag">R25</span>
+                                            
                                         </button>
                                     )
                                 })}

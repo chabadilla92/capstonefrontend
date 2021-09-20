@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import logo from '../../images/logo.svg'
 import { FaCartArrowDown } from 'react-icons/fa'
-
+import './navbar.css'
 
 export default class Navbar extends Component {
 state ={
@@ -12,22 +12,22 @@ state ={
         {
             id: 1,
             path: '/',
-            text: 'home'
+            text: 'HOME'
         },
         {
             id: 2,
             path: '/about',
-            text: 'about'
+            text: 'ABOUT'
         },
         {
             id: 3,
             path: '/videos',
-            text: 'videos'
+            text: 'VIDEOS'
         },
         {
             id: 4,
             path: '/shop',
-            text: 'shop'
+            text: 'SHOP'
         },
     ]
 };
@@ -43,7 +43,7 @@ navbarHandler = () => {
 
 render() {
     return (
-        <nav className="navbar navbar-expand-sm bg-light navbar-light">
+        <nav className="navbar navbar-expand-sm navbar-light">
         <Link to="/" className="navbar-brand">
             <img src={logo} alt="logo"/>
 
@@ -52,7 +52,8 @@ render() {
         <span className="navbar-toggler-icon"></span>
         </button>
         <div className={this.state.css}>
-            <ul className="navbar-nav mx-auto">
+
+            <ul className="navbar-nav ml-auto">
                 {this.state.links.map(link => {
                         return (
                             <li key={link.id} className="nav-item">
@@ -66,6 +67,7 @@ render() {
                         <FaCartArrowDown className="cart-icon snipcart-checkout"/>
                     </li>
             </ul>
+
         </div>
     </nav>
         );

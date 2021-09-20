@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { graphql } from 'gatsby'
 import Popup from '../components/popup'
 import VideoPlayer from "../components/videoplayer"
-
+import Layout from "../components/Layout"
 
 
 const VideosPage = ( {data} ) => {
@@ -17,6 +17,7 @@ const handleClick = (vid) => {
 
 return (
   <div>
+    <Layout>
     <p>VideosPage</p>
     {data.allContentfulVideoPost.edges.map(vid => (
       <div key={vid.node.video[0].id}>
@@ -25,6 +26,7 @@ return (
       </div>
     ))}
     <Popup trigger={buttonPopup} single={single} setTrigger={setButtonPopup} url={data.allContentfulVideoPost.edges}/>
+    </Layout>
   </div>
 )
 

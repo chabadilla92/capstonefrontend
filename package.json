@@ -5,6 +5,10 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@fontsource/barlow": "^4.5.0",
+    "@fontsource/bebas-neue": "^4.5.0",
+    "@fontsource/dela-gothic-one": "^4.5.0",
+    "@fontsource/josefin-sans": "^4.5.0",
     "@stripe/stripe-js": "^1.17.1",
     "bootstrap": "^5.1.0",
     "dotenv": "^10.0.0",

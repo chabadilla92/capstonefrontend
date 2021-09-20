@@ -24,3 +24,9 @@
     top: 16px;
     right: 16px;
 }
+
+.close-btn {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}

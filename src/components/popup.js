@@ -10,8 +10,7 @@ const Popup = (props) => {
 return (props.trigger) ? (
     <div className="popup">
         <div className="popup-inner">
-            <p>This is the popup component</p>
-
+            <h4>Play</h4>
             <div>
             <VideoPlayer 
                     videoSrcURL={props.single}
@@ -19,7 +18,7 @@ return (props.trigger) ? (
                 />
             </div>
 
-        <button className="close-btn" onClick={() => props.setTrigger(false)}>close</button>
+        <button className="close-btn" onClick={() => props.setTrigger(false)}>X</button>
         </div>
     </div>
 ) : null;

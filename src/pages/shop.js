@@ -14,7 +14,6 @@ const Shop = ({ data }) => (
     title="Shop Page"
     styleClass="default-background"
     />
-    <Menu items={data.menu}/>
     <Products />
   </Layout>
 );

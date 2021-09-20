@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Popup from '../components/popup'
 import VideoPlayer from "../components/videoplayer"
 import Layout from "../components/Layout"
-
+import Title from "../components/Globals/Title"
 
 const VideosPage = ( {data} ) => {
   // console.log(props)
@@ -18,18 +18,21 @@ const handleClick = (vid) => {
 return (
   <div>
     <Layout>
-    <p>VideosPage</p>
-
-    {data.allContentfulVideoPost.edges.map(vid => (
-      <div className="col-10 col-sm-8 col-md-6 col-lg-4 mx-auto my-3">
-        <div className="card" style={{minHeight:"100"}}>
-      <div key={vid.node.video[0].id}>
-        {/* <h3>{vid.node.title}</h3> */}
-        <button onClick={() => {handleClick(vid)}}><img src={vid.node.image.file.url} alt="Images"></img></button>
-      </div>
+    <Title title="Featured Gameplay"/>
+    <div className="container my-4">
+      <div className="row">
+        
+          {data.allContentfulVideoPost.edges.map(vid => (
+          <div className="col-10 col-sm-8 col-md-6 col-lg-6 mx-auto my-3">
+          <div key={vid.node.video[0].id}>
+          <h4>{vid.node.title}</h4>
+          <button className="vidbutton" onClick={() => {handleClick(vid)}}><img src={vid.node.image.file.url} alt="Images"></img></button>
+            </div>
         </div>
-      </div>
     ))}
+        
+       </div>
+     </div> 
     <Popup trigger={buttonPopup} single={single} setTrigger={setButtonPopup} url={data.allContentfulVideoPost.edges}/>
       
 

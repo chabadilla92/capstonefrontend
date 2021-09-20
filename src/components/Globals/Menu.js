@@ -75,7 +75,6 @@ export default class Menu extends Component {
                                         <div className="flex-grow-1 px-3">
                                             <div className="d-flex justify-content-between">
                                                 <h6 className="mb-0">{node.title}</h6>
-                                                <h6 className="mb-0 text-yellow">${node.price}</h6>
                                             </div>
                                             <p className="text-muted">
                                                 <small>{node.description.description}</small>

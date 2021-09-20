@@ -12,7 +12,7 @@ export default function Footer() {
                     <div class="wrapper">
                         <div class="icon facebook">
                             <div class="tooltip">Facebook</div>
-                            <span><i class="fab fa-facebook-f"></i></span>
+                            <span><i class="bi bi-facebook"></i></span>
                         </div>
                         <div class="icon twitter">
                             <div class="tooltip">Twitter</div>

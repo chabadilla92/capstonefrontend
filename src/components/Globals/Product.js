@@ -15,7 +15,7 @@ export default function Product({product}) {
                     data-item-id={product.id}
                     data-item-name={product.title}
                     data-item-price={product.price}
-                    data-item-url="localhost:8000/shop" //https://capstone-website-ca.netlify.app/shop
+                    data-item-url="https://capstone-website-ca.netlify.app/shop" //"localhost:8000/shop"
                     data-item-image={product.image.fluid.src}
                     >
                         Add to Cart

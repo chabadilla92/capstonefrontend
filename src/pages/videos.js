@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { graphql } from 'gatsby'
 import Popup from '../components/popup'
 import VideoPlayer from "../components/videoplayer"
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 import Title from "../components/Globals/Title"
 
 const VideosPage = ( {data} ) => {

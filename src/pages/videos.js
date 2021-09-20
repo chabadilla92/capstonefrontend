@@ -19,13 +19,20 @@ return (
   <div>
     <Layout>
     <p>VideosPage</p>
+
     {data.allContentfulVideoPost.edges.map(vid => (
+      <div className="col-10 col-sm-8 col-md-6 col-lg-4 mx-auto my-3">
+        <div className="card" style={{minHeight:"100"}}>
       <div key={vid.node.video[0].id}>
-        <h3>{vid.node.title}</h3>
+        {/* <h3>{vid.node.title}</h3> */}
         <button onClick={() => {handleClick(vid)}}><img src={vid.node.image.file.url} alt="Images"></img></button>
+      </div>
+        </div>
       </div>
     ))}
     <Popup trigger={buttonPopup} single={single} setTrigger={setButtonPopup} url={data.allContentfulVideoPost.edges}/>
+      
+
     </Layout>
   </div>
 )

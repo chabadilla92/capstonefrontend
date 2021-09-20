@@ -18,9 +18,14 @@ h1 {
   letter-spacing: 0.25rem !important;
 }
 
-h2, h3, h4, h5 {
+h2, h4, h5 {
   font-family: 'Bebas Neue', cursive;
+}
 
+/* FOOTER HEADER*/
+h3 { 
+  font-family: 'Bebas Neue', cursive;
+  font-size: 15px;
 }
 
 h6 {
@@ -47,16 +52,20 @@ h6 {
   background-size: cover;
 }
 
-.footer {
-  background: var(--mainBrown);
-}
 
 small {
   font-family: 'Barlow', sans-serif;
 
 }
 
-
+.aboutme {
+  width: 500px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 30px;
+  margin: 20px auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 
 @font-face {
   font-family: Cyber;

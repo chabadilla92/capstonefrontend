@@ -46,7 +46,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
 {
-	
+
   menu: allContentfulShirt {
 		edges {
 			node {

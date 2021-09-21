@@ -46,13 +46,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
 {
-	img:file(relativePath:{eq:"animated.jpeg"}) {
-		childImageSharp{
-			fluid {
-				...GatsbyImageSharpFluid_tracedSVG
-      }
-    }
-  }
+	
   menu: allContentfulShirt {
 		edges {
 			node {

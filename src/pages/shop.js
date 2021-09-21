@@ -21,7 +21,7 @@ const Shop = ({ data }) => (
 
 export const query = graphql`
 {
-	img:file(relativePath:{eq:"default-background.jpeg"}) {
+	img:file(relativePath:{eq:"shop.jpg"}) {
 		childImageSharp{
 			fluid {
 				...GatsbyImageSharpFluid_tracedSVG

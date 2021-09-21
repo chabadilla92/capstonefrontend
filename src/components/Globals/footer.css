@@ -5,6 +5,16 @@
     background-color: black;
 }
 
+.icon {
+  color: hsl(217, 100%, 21%);
+
+}
+
+.col-12 {
+  margin-left: auto;
+  text-align: right;
+}
+
 *:focus,
 *:active {
   outline: none !important;
